@@ -3,15 +3,18 @@
 */
 /* Scrollbar */
 html::-webkit-scrollbar {
-  background-color: #343434; 
+  background-color: #343434;
 }
 html::-webkit-scrollbar-thumb {
-  background: #757575; 
+  background: #757575;
 }
 
 /* Background par défaut */
-body.light {
-  background: #343434;
+body.light,
+header,
+header * {
+  background: #343434 !important;
+  border-color: #343434 !important;
 }
 
 /* Titre du site */
@@ -61,10 +64,12 @@ body.light {
 
 /* Masquage des éléments inutiles */
 /*.lobby__support,*/
-.lobby__support a[href^="https://shop.spreadshirt.com"],
+.lobby__support,
 .connect-links,
 .lobby__blog,
-.lobby__forum {
+.lobby__forum,
+.lobby__about,
+.lobby__streams a[href^="/streamer"] {
   display: none !important;
 }
 
@@ -73,7 +78,7 @@ body.light {
 */
 @media (min-width: 1274px) {
   .lobby__tournaments {
-    margin-top: -85px;
+    margin-top: 0;
   }
 }
 
@@ -91,7 +96,7 @@ body.light {
   #topnav.hover {
     background: #898989 !important;
   }
-  
+
   #topnav.hover section > a:first-child {
     color: #555 !important;
   }
