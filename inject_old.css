@@ -1,0 +1,103 @@
+/* GENERAL
+================================================================================
+*/
+/* Scrollbar */
+html::-webkit-scrollbar {
+  background-color: #343434;
+}
+html::-webkit-scrollbar-thumb {
+  background: #757575;
+}
+
+/* Background par défaut */
+body.light,
+header,
+header * {
+  background: #343434 !important;
+  border-color: #343434 !important;
+}
+
+/* Titre du site */
+.site-title a {
+  color: #ccc !important;
+}
+.site-title a:hover {
+  color: #666 !important;
+}
+
+/* Menu principal  et éléments à gauche */
+#topnav section a,
+.site-buttons #clinput span::before,
+.site-buttons .dasher a span::before,
+.site-buttons a.signin,
+.site-buttons #challenge-toggle span::before,
+.site-buttons #notify-toggle span::before,
+.site-buttons .dasher #user_tag {
+  color: #ddd !important
+}
+#topnav section a:hover,
+#topnav section a:active,
+#topnav section div,
+.site-buttons #challenge-app .empty,             /* Battle => div affiché au clic */
+.site-buttons #notify-app .empty,                /* Notification => div affiché au clic */
+.site-buttons a.signin:hover,                    /* Boutton pour se connecter */
+.site-buttons .shown > a,                        /* Boutton d'utilisateur */
+.site-buttons .dasher #dasher_app.dropdown,      /* Menu utilisateur affiché au clic */
+.site-buttons .dasher #dasher_app.dropdown div {
+  background: #898989 !important;
+}
+#topnav section div a:hover                      /* Réecriture du survol des liens du sous-menu */
+{
+  background: #1b78d0 !important;
+}
+
+/* Remplacement du nom du thème par défaut */
+.dropdown .background div a:first-child {
+  position: relative;
+  font-size: 0;
+}
+.dropdown .background div a:first-child::after {
+  content: 'Default';
+  font-size: 14px !important;
+  vertical-align: middle;
+}
+
+/* Masquage des éléments inutiles */
+/*.lobby__support,*/
+.lobby__support,
+.connect-links,
+.lobby__blog,
+.lobby__forum,
+.lobby__about,
+.lobby__streams a[href^="/streamer"] {
+  display: none !important;
+}
+
+/* Grands écrans
+================================================================================
+*/
+@media (min-width: 1274px) {
+  .lobby__tournaments {
+    margin-top: 0;
+  }
+}
+
+
+/* Petits écrans
+================================================================================
+*/
+@media (max-width: 1273px) {
+  .lobby__support {
+    margin-top: -125px;
+  }
+}
+
+@media (max-width: 980px) {
+  #topnav.hover {
+    background: #898989 !important;
+  }
+
+  #topnav.hover section > a:first-child {
+    color: #555 !important;
+  }
+}
